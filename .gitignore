@@ -1,6 +1,9 @@
 
-### DO NOT Ignore read me files
+### DO NOT Ignore read me or markdown files
 !README.md
+!**/README.md
+!**/*.md
+
 
 ### Ignore IDE files
 .idea/
