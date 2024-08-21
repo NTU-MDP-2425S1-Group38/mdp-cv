@@ -20,3 +20,7 @@ data/
 
 ### Ignore experiment files
 experiment/
+
+### Ignore cached python files
+__pycache__/
+*.pyc
