@@ -27,3 +27,38 @@ source ./venv/bin/activate
 pip install -r requirements.txt
 ```
 
+---
+
+## Files
+
+Raw weights have to be placed in the following directory.
+
+```text
+/weights/raw
+```
+
+Data (exported as `yolov8` format) has to be placed in the following directory.
+
+```text
+/data/
+```
+
+---
+
+## Training
+
+To train (and save) the model, simply use `utils.train_and_export` to train a `yolov8` model. This function abstracts
+the training function calls from Ultralytics, and model export settings. More importantly, it handles the loading of
+data path and model path (which is why the files above have to be placed in the correct directories).
+
+```python
+from utils import train_and_export
+
+train_and_export("my_weight_name.*", "name_of_data_set")
+```
+
+This will train the model and export the model and checkpoints into `/weights/trained/`.
+
+> [!NOTE]
+> See the documentation of `train_and_export`, as the number of epochs and image size can be specified.
+
