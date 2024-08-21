@@ -1,0 +1,22 @@
+
+### DO NOT Ignore read me files
+!README.md
+
+### Ignore IDE files
+.idea/
+.vs-code/
+
+### Ignore MacOS files
+.DS_Store
+
+### Ignore Python environments
+.env/
+env/
+venv/
+.venv/
+
+### Ignore data files
+data/
+
+### Ignore experiment files
+experiment/
