@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 31
+names: ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'BULLSEYE', 'C', 'CIRCLE', 'D', 'DOWN', 'E', 'F', 'G', 'H', 'LEFT', 'RIGHT', 'S', 'T', 'U', 'UP', 'V', 'W', 'X', 'Y', 'Z']
+
+roboflow:
+  workspace: hotdogsandwine
+  project: sausage-rolls-with-cheese
+  version: 1
+  license: MIT
+  url: https://universe.roboflow.com/hotdogsandwine/sausage-rolls-with-cheese/dataset/1
