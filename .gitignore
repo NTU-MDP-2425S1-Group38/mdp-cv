@@ -4,6 +4,12 @@
 !**/README.md
 !**/*.md
 
+### DO NOT IGNORE sample files
+!**/*.sample
+
+ignore environments
+**/*.env
+
 
 ### Ignore IDE files
 .idea/

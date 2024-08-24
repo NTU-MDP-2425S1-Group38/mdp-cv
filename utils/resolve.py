@@ -3,9 +3,11 @@ Code to resolve file directory location.
 """
 
 import os
+from datetime import datetime
+import re
 
 
-def resolve_data(data_name:str) -> str:
+def resolve_data(data_name: str) -> str:
     """
     Ultralytics would most likely take in the absolute path of data.yaml file. This file
     aims to resolve the path to the data.yaml file from just the name of the data
@@ -15,10 +17,41 @@ def resolve_data(data_name:str) -> str:
     """
     return f"{os.path.dirname(__file__)}/../data/{data_name}/data.yaml"
 
-def resolve_raw_weight(raw_weight_name:str) -> str:
+
+def resolve_raw_weight(raw_weight_name: str) -> str:
     """
     Function to return the absolute path to the raw model, located in /weights/raw/
     :param raw_weight_name: Name of weight
     :return: Absolute path to the weight
     """
     return f"{os.path.dirname(__file__)}/../weights/raw/{raw_weight_name}"
+
+
+def resolve_latest_trained_dir() -> str:
+    """
+    Resolve the latest training file dir.
+    :return: Absolute path to the dir with the weights.
+    """
+
+    # Path to the directory containing your files
+    directory = f"{os.path.dirname(__file__)}/../weights/trained/"
+
+    # Regular expression to match the date and time in the filename
+    pattern = r'model_(\d{4}-\d{2}-\d{2}_\d{2}-\d{2}-\d{2})'
+
+    # Initialize variables to keep track of the latest file
+    latest_file = None
+    latest_time = None
+
+    for filename in os.listdir(directory):
+        match = re.search(pattern, filename)
+        if match:
+            # Convert the matched string to a datetime object
+            file_time = datetime.strptime(match.group(1), '%Y-%m-%d_%H-%M-%S')
+
+            # Compare with the latest time found
+            if latest_time is None or file_time > latest_time:
+                latest_time = file_time
+                latest_file = filename
+
+    return directory + latest_file
