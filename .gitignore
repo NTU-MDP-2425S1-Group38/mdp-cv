@@ -24,9 +24,6 @@ env/
 venv/
 .venv/
 
-### Ignore data files
-data/
-
 ### Ignore experiment files
 experiment/
 
