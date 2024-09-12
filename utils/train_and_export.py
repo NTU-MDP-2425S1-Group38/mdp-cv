@@ -16,11 +16,14 @@ def __determine_best_device() -> str:
     :return: str {"0", "mpu", "cpu"}
     """
     if torch.cuda.is_available():
+        print("Using GPU!")
         return "0"
 
     if torch.backends.mps.is_available():
+        print("Using MPS!")
         return "mps"
 
+    print("No hardware accelerator! Using CPU!")
     return "cpu"
 
 
