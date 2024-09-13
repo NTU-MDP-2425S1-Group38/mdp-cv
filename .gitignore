@@ -30,3 +30,4 @@ experiment/
 ### Ignore cached python files
 __pycache__/
 *.pyc
+weights/trained/model_2024-09-12_16-36-23_EPOCHS 3000_source-share.v2i.yolov8/weights/best.onnx
