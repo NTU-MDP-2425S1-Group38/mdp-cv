@@ -33,3 +33,4 @@ __pycache__/
 weights/trained/model_2024-09-12_16-36-23_EPOCHS 3000_source-share.v2i.yolov8/weights/best.onnx
 weights/trained/model_2024-09-12_16-28-49_EPOCHS 3000_source-share.v2i.yolov8/weights/best.pt
 weights/trained/model_2024-09-12_16-28-49_EPOCHS 3000_source-share.v2i.yolov8/weights/last.pt
+weights/trained/model_2024-09-20_05-17-27_yolov8m-seg.pt_EPOCHS 3000_sausage-rolls-with-cheese.v11i.yolov8/weights/best.onnx
