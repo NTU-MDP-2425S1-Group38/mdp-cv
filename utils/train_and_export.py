@@ -56,7 +56,7 @@ def train_and_export(
         imgsz=imgsz,
         fliplr=0, flipud=0,
         project=f"{os.path.dirname(__file__)}/../weights/trained",
-        name=f"model_{strftime('%Y-%m-%d_%H-%M-%S', localtime())}_EPOCHS {epochs}_{data_name}",
+        name=f"model_{strftime('%Y-%m-%d_%H-%M-%S', localtime())}_{raw_weight_name}_EPOCHS {epochs}_{data_name}",
         device=__determine_best_device(),
         verbose=True
     )
